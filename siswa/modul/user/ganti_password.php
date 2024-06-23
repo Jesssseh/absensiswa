@@ -46,8 +46,8 @@
 									<?php 
 									if (isset($_POST['changePassword'])) {
 										$passLama = $data['password'];
-										$pass = sha1($_POST['pass']);
-										$newPass = sha1($_POST['pass1']);
+										$pass = ($_POST['pass']);
+										$newPass = ($_POST['pass1']);
 
 										if ($passLama == $pass) {
 											$set = mysqli_query($con, "UPDATE tb_siswa SET password='$newPass' WHERE id_siswa='$data[id_siswa]'");
