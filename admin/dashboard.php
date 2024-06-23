@@ -79,7 +79,7 @@ $data = mysqli_fetch_array($sql);
 
 			<!-- Navbar Header -->	
 			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
-				
+						
 				<div class="container-fluid">
 				<!-- 	<div class="collapse" id="search-nav">
 						<form class="navbar-left navbar-form nav-search mr-md-3">
@@ -139,7 +139,7 @@ $data = mysqli_fetch_array($sql);
 
 		<!-- Sidebar -->
 		<div class="sidebar sidebar-style-2">			
-			<div class="sidebar-wrapper scrollbar scrollbar-inner">
+			<div class="sidebar-wrapper scrollbar scrollbar-inner bg-grey2">
 				<div class="sidebar-content">
 					<div class="user">
 						<div class="avatar-sm float-left mr-2">
@@ -428,8 +428,8 @@ $data = mysqli_fetch_array($sql);
 									<?php 
 									if (isset($_POST['changePassword'])) {
 										$passLama = $data['password'];
-										$pass = sha1($_POST['pass']);
-										$newPass = sha1($_POST['pass1']);
+										$pass = ($_POST['pass']);
+										$newPass = ($_POST['pass1']);
 
 										if ($passLama == $pass) {
 											$set = mysqli_query($con,"UPDATE tb_admin SET password='$newPass' WHERE id_admin='$data[id_admin]' ");

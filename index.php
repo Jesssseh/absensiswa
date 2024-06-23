@@ -120,7 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="wrap-login100">
                 <form method="post" action="" class="login100-form validate-form">
                     <span class="login100-form-title p-b-48">
-                        <img src="./assets/img/sd.png" width="100">
+                        <img src="./assets/img/sd.png" width="200">
                     </span>
                     <span class="login100-form-title p-b-26">
                         Absensi SD Negeri Ciater 03

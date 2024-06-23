@@ -117,7 +117,6 @@ $tglTerakhir = 25;
     		<li>I = Izin</li>
     		<li>T = Terlambat</li>
     		<li>A = Absen</li>
-    		<li>C = Cabut</li>
     	</ul>
 	<!-- <p>H= Hadir</p>
 	<p>I = Izin</p>
@@ -169,7 +168,6 @@ $tglTerakhir = 25;
 	<td bgcolor="#4CAF50" align="center">I</td>
 	<td bgcolor="#D50000" align="center">T</td>
 	<td bgcolor="#76FF03" align="center">A</td>
-	<td bgcolor="#9C27B0" align="center">C</td>
  
   </tr>
   	<?php 
@@ -208,9 +206,6 @@ $tglTerakhir = 25;
 				echo "<b style='color:#D50000;'>A</b>";
 			}elseif ($h['ket']=='T') {
 				echo "<b style='color:#76FF03;'>T</b>";
-			}
-			else{
-				echo "<b style='color:#9C27B0;'>C</b>";
 			}
 			
 		
@@ -278,20 +273,7 @@ $alfa = mysqli_fetch_array(mysqli_query($con,"SELECT COUNT(ket) AS alfa FROM _lo
  WHERE _logabsensi.id_siswa='$ds[id_siswa]' and _logabsensi.ket='A' and _logabsensi.id_mengajar='$_GET[pelajaran]' AND tb_mengajar.id_mkelas='$_GET[kelas]'  AND tb_thajaran.status=1 AND tb_semester.status=1 "));
 echo $alfa['alfa'];
 
-?>
-</td> 
-
-<td align="center" style="font-weight: bold;">
-	<?php 
-$cabut = mysqli_fetch_array(mysqli_query($con,"SELECT COUNT(ket) AS cabut FROM _logabsensi
-	INNER JOIN tb_mengajar ON _logabsensi.id_mengajar=tb_mengajar.id_mengajar
-		INNER JOIN tb_semester ON tb_mengajar.id_semester=tb_semester.id_semester
-		INNER JOIN tb_thajaran ON tb_mengajar.id_thajaran=tb_thajaran.id_thajaran
- WHERE _logabsensi.id_siswa='$ds[id_siswa]' and _logabsensi.ket='C' and _logabsensi.id_mengajar='$_GET[pelajaran]' AND tb_mengajar.id_mkelas='$_GET[kelas]'  AND tb_thajaran.status=1 AND tb_semester.status=1 "));
-echo $cabut['cabut'];
-
-?>
-</td>  
+?> 
   </tr>
 
 <?php } ?>
@@ -342,7 +324,7 @@ echo $cabut['cabut'];
 		</td> -->
 		<td align="right">
 			<p>
-				Agam, <?php echo date('d-F-Y'); ?>
+				<?php echo date('d-F-Y'); ?>
 			</p>
 			<p>
 				Kepala Sekolah
@@ -351,9 +333,9 @@ echo $cabut['cabut'];
 				<br>
 				<br>
 				<br>
-				KHOLIS SANTOSO, MA <br>
+				Euis Komala, S.Pd <br>
 				----------------------<br>
-				NIP.197411092002102003
+				NIP.123123123123123
 			</p>
 		</td>
 	</tr>

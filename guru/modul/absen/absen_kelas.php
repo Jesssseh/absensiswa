@@ -149,10 +149,6 @@ if (mysqli_num_rows($siswa_telah_absen_hari_ini) < 1) {
 
 														
 
-														<label class="form-check-label">
-														<input name="ket-<?=$i;?>" class="form-check-input" type="checkbox" value="C">
-														<span class="form-check-sign">C</span>
-														</label>
 						<label>
 								
 						</label>

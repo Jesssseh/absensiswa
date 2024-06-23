@@ -190,6 +190,10 @@ body {
 	background: $grey-color;
 }
 
+.bg-grey3 {
+	background: $grey3-color;
+}
+
 @mixin linear-gradient($direction, $color-stops...) {
 	background: nth(nth($color-stops, 2), 1) !important;
 	background: -webkit-linear-gradient(legacy-direction($direction), $color-stops) !important;

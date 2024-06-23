@@ -47,7 +47,7 @@
 									if (isset($_POST['changePassword'])) {
 										$passLama = $data['password'];
 										$pass = sha1($_POST['pass']);
-										$newPass = password_hash($_POST['pass1'], PASSWORD_DEFAULT);
+										$newPass = sha1($_POST['pass1']);
 
 										if ($passLama == $pass) {
 											$set = mysqli_query($con, "UPDATE tb_siswa SET password='$newPass' WHERE id_siswa='$data[id_siswa]'");
@@ -106,4 +106,7 @@
 							</div>
 						</div>
 
-	<a href="javascript:history.back()" class="btn btn-default btn-block mb-1"><i class="fas fa-arrow-circle-left"></i> Kembali</a>
+	<a href="javascript:history.back()" class="btn btn-default btn-block mb-1">
+		<i class="fas fa-arrow-circle-left">
+			
+		</i> Kembali</a>

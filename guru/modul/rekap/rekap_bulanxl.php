@@ -214,7 +214,7 @@ echo $alfa['alfa'];
 		</td> -->
 		<td align="right">
 			<p>
-				Agam, <?php echo date('d-F-Y'); ?>
+				<?php echo date('d-F-Y'); ?>
 			</p>
 			<p>
 				Kepala Sekolah
@@ -223,9 +223,9 @@ echo $alfa['alfa'];
 				<br>
 				<br>
 				<br>
-				NURMIZA,MA <br>
+				Euis Komala, S.Pd <br>
 				----------------------<br>
-				NIP.197411092002102003
+				NIP.123123123123123
 			</p>
 		</td>
 	</tr>
