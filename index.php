@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $redirect_url = './guru/';
             break;
         case 2: // Siswa
-            $sql = "SELECT * FROM tb_siswa WHERE nis='$username' AND password='$hashed_password' AND status='1'";
+            $sql = "SELECT * FROM tb_siswa WHERE nis='$username' AND password='$password' AND status='1'";
             $redirect_url = './siswa/';
             break;
         default:
